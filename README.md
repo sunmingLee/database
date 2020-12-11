@@ -4,10 +4,10 @@
 
 
 ## 기술 블로그 주소
-https://jinsol99.blogspot.com/2020/11/1.html  
-https://eunsuh753.tistory.com/2  
-https://tjsals.medium.com/%EC%A1%B8%EC%97%85%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-1-3f70518757f1  
-https://blog.naver.com/dbsgkdud136/222156186070
+이진솔 : https://jinsol99.blogspot.com/2020/11/1.html  
+조은서 : https://eunsuh753.tistory.com/2  
+이선민 : https://tjsals.medium.com/%EC%A1%B8%EC%97%85%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-1-3f70518757f1  
+윤하영 : https://blog.naver.com/dbsgkdud136/222156186070
 
 ## 참고 논문
 박종호, 강성홍. (2019). 머신러닝을 이용한 신경계통의 질환 퇴원환자의 중증도 보정 재원일수 예측 모형 개발. 보건사회연구  
