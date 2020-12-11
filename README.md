@@ -1,6 +1,7 @@
 # 입원 환자의 데이터를 바탕으로 입원 기간 예측 알고리즘 개발
 
 ## 시연 영상
+https://www.youtube.com/watch?v=rd1g5G8MAY4&feature=youtu.be
 
 
 ## 기술 블로그 주소
