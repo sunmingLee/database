@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel = "stylesheet" href="{% static 'css/cover.css' %}">
+
+    <title>LOGO</title>
+</head>
+
+<body  class = "text-center">
+ 
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <a class="navbar-brand" href="{% url 'index' %}">LOGO</a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+    </div>
+</nav>
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">LOGO</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="{% url 'index' %}">Home</a>
+        <a class="nav-link" href="{% url 'map' %}">Map</a>
+        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+      </nav>
+    </div>
+  </header>
+</div>
+
+  <body>
+    <h1><br>prediction</h1>
+    <form action="{% url 'result' %}">
+      {% csrf_token %}
+
+      <p>Age:</p>
+      <input type="text" name="Age">
+      <br>
+
+      <p>Available_Extra_Rooms_in_HosPital:</p>
+      <input type="text" name="Available_Extra_Rooms_in_HosPital">
+      <br>
+
+      <p>Admission_Deposit:</p>
+      <input type="text" name="Admission_Deposit">
+      <br>
+
+      <p>Severity_of_Illness:</p>
+      <input type="text" name="Severity_of_Illness">
+      <br>
+      <br>
+      <p>Department:</p>
+      <form method = "post" action= "">
+        <input type = "radio" name = "radio" value = "1">{{"radiotherapy"}}
+        <input type = "radio" name = "radio" value = "2">{{"anesthesia"}}
+        <input type = "radio" name = "radio" value = "3">{{"gynecology"}}
+        <input type = "radio" name = "radio" value = "4">{{"TB & Chest diease"}}
+        <input type = "radio" name = "radio" value = "5">{{"surgery"}}
+      </form>
+    
+      <br>
+
+
+      <p>Type of Admission:</p>
+      <form method = "post" action = "">
+        <input type = "radio" name = "radio" value = "6">{{"Trauma"}}
+        <input type = "radio" name = "radio" value = "7">{{"Emergency"}}
+        <input type = "radio" name = "radio" value = "8">{{"urgent"}}
+      </form>
+      <br>
+      <br>
+      <input type="submit" value='Get Predictions'>
+    </form>
+    <footer class="mastfoot mt-auto">
+  </footer>
+</div>
+</body>
+
+<!-- jQuery JS -->
+<script src="{% static 'jquery-3.5.1.min.js' %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'bootstrap.min.js' %}"></script>
+
+  </body>
+</html>

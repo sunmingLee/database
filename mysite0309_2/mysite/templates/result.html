@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel = "stylesheet" href="{% static 'css/cover.css' %}">
+
+    <title>LOGO</title>
+</head>
+
+<body  class = "text-center">
+ 
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <a class="navbar-brand" href="{% url 'index' %}">LOGO</a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+    </div>
+</nav>
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">LOGO</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="{% url 'index' %}">Home</a>
+        <a class="nav-link" href="{% url 'map' %}">Map</a>
+        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+      </nav>
+    </div>
+  </header>
+</div>
+<html lang="en" dir="ltr">
+  <body>
+  	<br><br>
+    <h1>Prediction</h1>
+
+    {{ result }}
+    
+  </body>
+</html>
+
+<script>
+function goBack() {
+  window.history.go(-2);
+}
+</script>
