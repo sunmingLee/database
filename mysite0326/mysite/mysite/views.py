@@ -27,12 +27,9 @@ def result(request):
     Severity_of_Illness = int(request.GET['Severity_of_Illness'])
 
     result = getPredictions(Age,Available_Extra_Rooms_in_HosPital, Admission_Deposit, Severity_of_Illness)
-    # depart = request.POST.getlist['department']
-    # department = depart[0]
-    # admission = request.POST['admission']
-   
-    department = request.POST.get('department')
-    admission = request.POST.get('admission')
+       
+    department = request.GET.getlist("department","")
+    admission = request.GET.getlist("admission","")
      
     return render(request, 'result.html', {'result':result, 'department':department, 'admission':admission})
 
