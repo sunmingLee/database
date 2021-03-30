@@ -9,8 +9,8 @@ def input(request):
 def getPredictions(Age,Available_Extra_Rooms_in_HosPital, Admission_Deposit, Severity_of_Illness):
     import pickle
     import lightgbm
-    model = pickle.load(open("C:/Users/조은서/졸프/mysite0322/mysite/mysite/code_modified.sav", "rb"))
-    scaled = pickle.load(open("C:/Users/조은서/졸프/mysite0322/mysite/mysite/scaler_simple.sav", "rb"))
+    model = pickle.load(open("./mysite/code_modified.sav", "rb"))
+    scaled = pickle.load(open("./mysite/scaler_simple.sav", "rb"))
     prediction = model.predict(scaled.transform([[Age,Available_Extra_Rooms_in_HosPital, Admission_Deposit, Severity_of_Illness]]))
     
     if prediction >= 0:
