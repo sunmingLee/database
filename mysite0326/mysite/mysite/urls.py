@@ -20,6 +20,8 @@ from mysite import views
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.conf.urls import handler400, handler404, handler500
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name = 'index'),
@@ -29,4 +31,9 @@ urlpatterns = [
     path('index/',views.index, name='index'),
     path('map/', views.map, name='map'),
     path('contact/',views.contact, name='contact'),
+    #path('error/', views.error, name='error'),
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+
+handler400 = 'mysite.views.bad_request'
+handler404 = 'mysite.views.page_not_found'
+handler500 = 'mysite.views.server_error'

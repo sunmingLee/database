@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import Http404
+#from django.http import Http404
 
 # our home page view
 def input(request):    
@@ -22,14 +22,11 @@ def getPredictions(Age,Available_Extra_Rooms_in_HosPital, Admission_Deposit, Sev
 
 # our result page view
 def result(request):
-    try:
-        Age = int(request.GET['Age'])
-        Available_Extra_Rooms_in_HosPital = int(request.GET['Available_Extra_Rooms_in_HosPital'])
-        Admission_Deposit = int(request.GET['Admission_Deposit'])
-        Severity_of_Illness = int(request.GET['Severity_of_Illness'])
-
-    except:
-        raise Http404("404 Not Found!")
+    
+    Age = int(request.GET['Age'])
+    Available_Extra_Rooms_in_HosPital = int(request.GET['Available_Extra_Rooms_in_HosPital'])
+    Admission_Deposit = int(request.GET['Admission_Deposit'])
+    Severity_of_Illness = int(request.GET['Severity_of_Illness'])
 
     result = getPredictions(Age,Available_Extra_Rooms_in_HosPital, Admission_Deposit, Severity_of_Illness)
        
@@ -38,6 +35,15 @@ def result(request):
      
     return render(request, 'result.html', {'result':result, 'department':department, 'admission':admission})
 
+def bad_request(request, exception):
+    return render(request, 'error_400.html', status = 400)
+
+def page_not_found(request, exception):
+    return render(request, 'error_404.html', status = 404)
+
+def server_error(request):
+    return render(request, 'error_500.html', status = 500)
+    
 def index(request):
    return render(request, 'index.html')
 
@@ -47,9 +53,13 @@ def map(request):
 def contact(request):
    return render(request, 'contact.html')
 
-def my_view(request):
-    if request.method == 'POST':
-        selected = request.POST.getlist('radio')
-        print(selected)
+# def error_400(request):
+#     return render(request, 'error_400.html')
 
-    return redirect(...)
+# def error_404(request):
+#     return render(request, 'error_404.html')
+
+# def error_500(request):
+#     return render(request, 'error_500.html')
+
+
