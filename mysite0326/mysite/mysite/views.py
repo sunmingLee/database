@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import Http404
 
 # our home page view
 def input(request):    
@@ -21,10 +22,14 @@ def getPredictions(Age,Available_Extra_Rooms_in_HosPital, Admission_Deposit, Sev
 
 # our result page view
 def result(request):
-    Age = int(request.GET['Age'])
-    Available_Extra_Rooms_in_HosPital = int(request.GET['Available_Extra_Rooms_in_HosPital'])
-    Admission_Deposit = int(request.GET['Admission_Deposit'])
-    Severity_of_Illness = int(request.GET['Severity_of_Illness'])
+    try:
+        Age = int(request.GET['Age'])
+        Available_Extra_Rooms_in_HosPital = int(request.GET['Available_Extra_Rooms_in_HosPital'])
+        Admission_Deposit = int(request.GET['Admission_Deposit'])
+        Severity_of_Illness = int(request.GET['Severity_of_Illness'])
+
+    except:
+        raise Http404("404 Not Found!")
 
     result = getPredictions(Age,Available_Extra_Rooms_in_HosPital, Admission_Deposit, Severity_of_Illness)
        
