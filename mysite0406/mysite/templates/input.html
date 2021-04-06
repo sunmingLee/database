@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="{% static 'css/cover.css' %}">
+    <title>LOGO</title>
+
+    <style>
+         table {
+        width: 40%;
+      }
+      select {
+    
+    width: 185px;
+    height: 34px;
+}
+  </style>
+</head>
+
+<body class="container2">
+    <!-- 
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <a class="navbar-brand" href="{% url 'index' %}">LOGO</a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+    </div>
+</nav>
+-->
+    <header>
+        <nav class="navbar">
+            <a class="left" href="{% url 'index' %}">LOGO</a>
+            <span class="right">
+                <a href="{% url 'index' %}">HOME </a>
+                <a href="{% url 'map' %}">MAP </a>
+                <a href="{% url 'contact' %}">CONTACT </a>
+            </span>
+        </nav>
+    </header>
+
+    <div class="body1">
+        <h1></br>PREDICTION</h1>
+            <!-- <div style="padding: 15px;
+    margin: 5px 0 5px 0;
+    display: inline-block;">
+                <input type="radio" name="department" value="1">{{"radiotherapy"}}
+                <input type="radio" name="department" value="2">{{"anesthesia"}}
+                <input type="radio" name="department" value="3">{{"gynecology"}}
+                <input type="radio" name="department" value="4">{{"TB & Chest diease"}}
+                <input type="radio" name="department" value="5">{{"surgery"}}
+            </div>
+        </label> -->
+        <!--<label for="admission">Type of Admission</br>
+            <div  style="padding: 15px;
+    margin: 5px 0 5px 0;
+    display: inline-block;">
+                <input type="radio" name="admission" value="6">{{"trauma"}}
+                <input type="radio" name="admission" value="7">{{"emergency"}}
+                <input type="radio" name="admission" value="8">{{"urgent"}}
+            </div>
+        </label> -->
+        <form action="{% url 'result' %}">
+            {% csrf_token %}
+            <table>
+                <tr>
+            <td><label for="age"> Age </td><td><input type="text" class="form-control" name="Age" id="age" required></label></td></tr>
+            <tr><td>
+            <label for="room"> Extra Rooms </td><td><input type="text" class="form-control" name="Available_Extra_Rooms_in_HosPital" id="room" required></label></td></tr>
+            <tr><td>
+            <label for="deposit">Admission Deposit($) </td><td><input type="text" class="form-control" name="Admission_Deposit" id="deposit" required></label></td></tr>
+            <tr><td>
+            <label for="severity">Severity of Illness </label></td><td><input type="text" class="form-control" name="Severity_of_Illness" id="severity" required></label>
+            </td></tr>
+
+            <tr><td>
+            <label for="department">Department</label></td><td>
+            <select name="department" class="custom-select d-block w-100" required>
+                <option value>Choose...</option>
+                <option value=0>radiotherapy</option>
+                <option value=1>anesthesia</option>
+                <option value=2>gynecology</option>
+                <option value=3>TB & Chest diease</option>
+                <option value=4>surgery</option>
+            </select></td>
+            <tr><td>
+            <label for="admission">Type of Admission</label></td><td>
+            <select name = "admission" class="custom-select d-block w-100" required>
+                <option value>Choose...</option>
+                <option value=0>trauma</option>
+                <option value=1>emergency</option>
+                <option value=2>urgent</option>
+            </select></td></tr></table>
+            <br><br>
+            <input class="button1" type="submit" value='Get Prediction' onClick="location.href={% url 'result' %}">
+        </form>
+
+        
+    </div>
+</body>
+
+</html>
