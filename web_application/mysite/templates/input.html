@@ -50,17 +50,23 @@
             {% csrf_token %}
             <table>
                 <tr>
-            <td><label for="age"> Age <input type="button" value="?" style="CURSOR:hand;" title="변수 설명"></td><td><input type="text" class="form-control" name="Age" id="age" required></label></td></tr>
+            <td><label for="age"> Age </td><td><input type="text" class="form-control" name="Age" id="age" required></label></td></tr>
             <tr><td>
-            <label for="room"> Extra Rooms </td><td><input type="text" class="form-control" name="Available_Extra_Rooms_in_HosPital" id="room" required></label></td></tr>
+            <label for="room"> Extra Rooms
+                <input type="button" value="?" style="CURSOR:hand;" title="Number of extra rooms available in the hospital"> </td><td>
+                <input type="text" class="form-control" name="Available_Extra_Rooms_in_HosPital" id="room" required></label></td></tr>
             <tr><td>
-            <label for="deposit">Admission Deposit($) </td><td><input type="text" class="form-control" name="Admission_Deposit" id="deposit" required></label></td></tr>
+            <label for="deposit">Admission Deposit($)
+                <input type="button" value="?" style="CURSOR:hand;" title="Deposit at the Admission Time ($)"></td><td>
+                <input type="text" class="form-control" name="Admission_Deposit" id="deposit" required></label></td></tr>
             <tr><td>
-            <label for="severity">Severity of Illness(0, 1, 2) </label></td><td><input type="text" class="form-control" name="Severity_of_Illness" id="severity" required></label>
+            <label for="severity">Severity of Illness
+                <input type="button" value="?" style="CURSOR:hand;" title="Severity of the illness recorded at the time of admission which gives a medical classification into minor, moderate, and extreme. (This class is meant to provide a basis for evaluating hospital resource use or to establish patient care guidelines.) Each of these categories is matched by 0,1, and 2 in our model."></td><td>
+                <input type="text" class="form-control" name="Severity_of_Illness" id="severity" required></label></td></tr>
             </td></tr>
 
             <tr><td>
-            <label for="department">Department</label></td>
+            <label for="department">Department <input type="button" value="?" style="CURSOR:hand;" title="Department overlooking the case classified as radiotherapy, gynecology, anesthesia, TB & Chest disease and surgery"></label></td>
             <td><select name = "department" class="custom-select d-block w-100" required>
                 <option value>Choose...</option>
                 <option value=0>radiotherapy</option>
@@ -70,7 +76,10 @@
                 <option value=4>surgery</option>
             </select></td>
             <tr><td>
-            <label for="admission">Type of Admission</label></td><td>
+            <label for="admission">Type of Admission <input type="button" value="?" style="CURSOR:hand;" title="Admission type registered by the hospital indicating the priority of this admission.
+                Emergency means that the patient requires immediate medical intervention as a result of severe, life threatening or potentially disabling conditions.
+                Urgent means that the patient requires immediate attention for the care and treatment of a physical or mental disorder.
+                Trauma means the patient visits a trauma center, a facility licensed or designated by the State or local government authority authorized to do so."></label></td><td>
             <select name = "admission" class="custom-select d-block w-100" required>
                 <option value>Choose...</option>
                 <option value=0>trauma</option>
