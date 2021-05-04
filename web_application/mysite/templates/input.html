@@ -50,7 +50,7 @@
             {% csrf_token %}
             <table>
                 <tr>
-            <td><label for="age"> Age </td><td><input type="text" class="form-control" name="Age" id="age" required></label></td></tr>
+            <td><label for="age"> Age <input type="button" value="?" style="CURSOR:hand;" title="변수 설명"></td><td><input type="text" class="form-control" name="Age" id="age" required></label></td></tr>
             <tr><td>
             <label for="room"> Extra Rooms </td><td><input type="text" class="form-control" name="Available_Extra_Rooms_in_HosPital" id="room" required></label></td></tr>
             <tr><td>
@@ -70,8 +70,7 @@
                 <option value=4>surgery</option>
             </select></td>
             <tr><td>
-            <label for="admission">Type of Admission</label>
-            <input type="button" value="?" style="CURSOR:hand;" title="변수 설명"></td><td>
+            <label for="admission">Type of Admission</label></td><td>
             <select name = "admission" class="custom-select d-block w-100" required>
                 <option value>Choose...</option>
                 <option value=0>trauma</option>
