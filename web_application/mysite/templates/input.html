@@ -46,25 +46,6 @@
 
     <div class="body1">
         <h1></br>PREDICTION</h1>
-            <!-- <div style="padding: 15px;
-    margin: 5px 0 5px 0;
-    display: inline-block;">
-                <input type="radio" name="department" value="1">{{"radiotherapy"}}
-                <input type="radio" name="department" value="2">{{"anesthesia"}}
-                <input type="radio" name="department" value="3">{{"gynecology"}}
-                <input type="radio" name="department" value="4">{{"TB & Chest diease"}}
-                <input type="radio" name="department" value="5">{{"surgery"}}
-            </div>
-        </label> -->
-        <!--<label for="admission">Type of Admission</br>
-            <div  style="padding: 15px;
-    margin: 5px 0 5px 0;
-    display: inline-block;">
-                <input type="radio" name="admission" value="6">{{"trauma"}}
-                <input type="radio" name="admission" value="7">{{"emergency"}}
-                <input type="radio" name="admission" value="8">{{"urgent"}}
-            </div>
-        </label> -->
         <form action="{% url 'result' %}">
             {% csrf_token %}
             <table>
@@ -89,7 +70,8 @@
                 <option value=4>surgery</option>
             </select></td>
             <tr><td>
-            <label for="admission">Type of Admission</label></td><td>
+            <label for="admission">Type of Admission</label>
+            <input type="button" value="?" style="CURSOR:hand;" title="변수 설명"></td><td>
             <select name = "admission" class="custom-select d-block w-100" required>
                 <option value>Choose...</option>
                 <option value=0>trauma</option>
