@@ -39,7 +39,7 @@ def result(request):
 
     result = getPredictions(Department, Type_of_Admission, Severity_of_Illness, Available_Extra_Rooms_in_HosPital, Age,Admission_Deposit)
      
-    return render(request, 'result.html', {'result':result, 'department':Department, 'admission':Type_of_Admission})
+    return render(request, 'result.html', {'result':result})
 
 def bad_request(request, exception):
     return render(request, 'error_400.html', status = 400)
