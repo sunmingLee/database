@@ -46,7 +46,7 @@ def result(request):
 #     return render(request, 'error_400.html', status = 400)
 
 def page_not_found(request, exception):
-    return render(request, 'error_404.html', status = 400, 404, 500)
+    return render(request, 'error_404.html', status = 500)
 
 # def server_error(request):
 #     return render(request, 'error_500.html', status = 500)
