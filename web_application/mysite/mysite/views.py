@@ -45,7 +45,7 @@ def result(request):
 # def bad_request(request, exception):
 #     return render(request, 'error_400.html', status = 400)
 
-def page_not_found(request, exception):
+def page_not_found(request):
     return render(request, 'error_404.html', status = 500)
 
 # def server_error(request):
