@@ -61,10 +61,15 @@
                 <input type="text" class="form-control" name="Admission_Deposit" id="deposit" required></label></td></tr>
             <tr><td>
             <label for="severity">Severity of Illness
-                <input type="button" value="?" style="CURSOR:hand;" title="Severity of the illness recorded at the time of admission which gives a medical classification into minor, moderate, and extreme. (This class is meant to provide a basis for evaluating hospital resource use or to establish patient care guidelines.) Each of these categories is matched by 0,1, and 2 in our model."></td><td>
-                <input type="text" class="form-control" name="Severity_of_Illness" id="severity" required></label></td></tr>
+                <input type="button" value="?" style="CURSOR:hand;" title="Severity of the illness recorded at the time of admission which gives a medical classification into minor, moderate, and extreme. (This class is meant to provide a basis for evaluating hospital resource use or to establish patient care guidelines.) Each of these categories is matched by 0,1, and 2 in our model."></label></td>
+            <td><select name = "severity" class="custom-select d-block w-100" required>
+                <option value>Choose...</option>
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+            </select>
             </td></tr>
-
+        
             <tr><td>
             <label for="department">Department <input type="button" value="?" style="CURSOR:hand;" title="Department overlooking the case classified as radiotherapy, gynecology, anesthesia, TB & Chest disease and surgery"></label></td>
             <td><select name = "department" class="custom-select d-block w-100" required>

@@ -6,7 +6,7 @@ import lightgbm
 def input(request):    
     return render(request, 'input.html')
 
-def getPredictions(Department, Type_of_Admission, Severity_of_Illness, Available_Extra_Rooms_in_HosPital, Age,Admission_Deposit):
+def getPredictions(Department, Type_of_Admission, Severity_of_Illness, Available_Extra_Rooms_in_HosPital, Age, Admission_Deposit):
     model = pickle.load(open("./mysite/code_final.sav", "rb"))
     scaled = pickle.load(open("./mysite/scaler_final.sav", "rb"))
 
@@ -33,7 +33,7 @@ def result(request):
     Age = int(request.GET['Age'])
     Available_Extra_Rooms_in_HosPital = int(request.GET['Available_Extra_Rooms_in_HosPital'])
     Admission_Deposit = int(request.GET['Admission_Deposit'])
-    Severity_of_Illness = int(request.GET['Severity_of_Illness'])
+    Severity_of_Illness = int(request.GET['severity'])
     Department = int(request.GET['department'])
     Type_of_Admission = int(request.GET['admission'])
 
