@@ -6,11 +6,11 @@ import lightgbm
 def input(request):    
     return render(request, 'input.html')
 
-def getPredictions(Department, Type_of_Admission, Severity_of_Illness, Available_Extra_Rooms_in_HosPital, Age, Admission_Deposit):
+def getPredictions(Department, Type_of_Admission, Severity_of_Illness, Available_Extra_Rooms_in_HosPital, Age,Admission_Deposit):
     model = pickle.load(open("./mysite/code_final.sav", "rb"))
     scaled = pickle.load(open("./mysite/scaler_final.sav", "rb"))
 
-    visitors = getVisitors(Age,Available_Extra_Rooms_in_HosPital, Admission_Deposit, Severity_of_Illness, Department, Type_of_Admission)
+    visitors = getVisitors(Department, Type_of_Admission, Severity_of_Illness, Available_Extra_Rooms_in_HosPital, Age, Admission_Deposit)
     prediction = model.predict(scaled.transform([[Department, Type_of_Admission, visitors, Severity_of_Illness, Available_Extra_Rooms_in_HosPital, Age,Admission_Deposit]]))
     
     if prediction >= 0:
@@ -18,7 +18,7 @@ def getPredictions(Department, Type_of_Admission, Severity_of_Illness, Available
     else:
         return "error"
         
-def getVisitors(Age,Available_Extra_Rooms_in_HosPital, Admission_Deposit, Severity_of_Illness, Department, Type_of_Admission):
+def getVisitors(Department, Type_of_Admission, Severity_of_Illness, Available_Extra_Rooms_in_HosPital, Age, Admission_Deposit):
     visitors = pickle.load(open("./mysite/V_code_final.sav", "rb"))
     scaler = pickle.load(open("./mysite/V_scaler_final.sav", "rb"))
     number = visitors.predict(scaler.transform([[Department, Type_of_Admission, Severity_of_Illness, Available_Extra_Rooms_in_HosPital, Age, Admission_Deposit]]))
@@ -26,7 +26,8 @@ def getVisitors(Age,Available_Extra_Rooms_in_HosPital, Admission_Deposit, Severi
     if number >= 0:
         return number
     else:
-        return "error" 
+        return "error"
+        
 
 # our result page view
 def result(request):
