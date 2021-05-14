@@ -42,14 +42,14 @@ def result(request):
     visitors = getVisitors(Department, Type_of_Admission, Severity_of_Illness, Available_Extra_Rooms_in_HosPital, Age, Admission_Deposit)
     return render(request, 'result.html', {'result':result,'visitors':visitors})
 
-# def bad_request(request, exception):
-#     return render(request, 'error_400.html', status = 400)
+def bad_request(request, exception):
+    return render(request, 'error_404.html', status = 400)
 
 def page_not_found(request):
-    return render(request, 'error_404.html', status = 500)
+    return render(request, 'error_404.html', status = 404)
 
-# def server_error(request):
-#     return render(request, 'error_500.html', status = 500)
+def server_error(request):
+    return render(request, 'error_404.html', status = 500)
     
 def index(request):
    return render(request, 'index.html')
