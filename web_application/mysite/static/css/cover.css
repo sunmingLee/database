@@ -95,6 +95,7 @@ body {
     background-size: cover;
     overflow: hidden;
     height: 100%;
+    width: auto;
     top: 50%;
     left: 50%;
 }
