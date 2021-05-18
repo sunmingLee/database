@@ -77,6 +77,8 @@ body {
     position: relative;
     background-image: url(background_img.png);
     background-size: cover;
+    background-repeat: no-repeat;
+    overflow: auto;
 }
 
 .container2 {
@@ -85,6 +87,8 @@ body {
     position: relative;
     background-image: url(bgi_input.png);
     background-size: cover;
+    background-repeat: no-repeat;
+    overflow: auto;
 }
 
 .container3{
@@ -94,6 +98,7 @@ body {
     background-image: url(404_colormatch.png);
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: auto;
 }
 
 .left {
