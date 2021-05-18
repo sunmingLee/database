@@ -91,7 +91,7 @@ body {
   margin-left: 5%;
     margin-right: 5%;
     position: absolute;
-    background-image: url(404.png);
+    background-image: url(404_error.png);
     background-size: cover;
     overflow: hidden;
     height: 100%;
