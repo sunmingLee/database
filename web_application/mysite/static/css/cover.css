@@ -92,8 +92,7 @@ body {
     margin-right: 5%;
     position: relative;
     background-image: url(404.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .left {
