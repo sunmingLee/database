@@ -85,7 +85,7 @@ body {
     margin-left: 5%;
     margin-right: 5%;
     position: relative;
-    background-image: url(bgi_input.png);
+    background-image: url(background_right.png);
     background-size: cover;
     background-repeat: no-repeat;
     overflow: auto;
