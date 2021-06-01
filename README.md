@@ -1,22 +1,25 @@
 # 입원 환자의 데이터를 바탕으로 입원 기간 예측 알고리즘 개발
 
-## 프로젝트의 목적
-최근 코로나19의 영향으로 병실 부족사태가 심각해졌다. 미국의 경우 한국에 비해 입원 비용이 높고, 입원 환자는 언제 퇴원할지 예측할 수 없기 때문에 환자 입장에서는 불확실성이 높은 문제가 있다. 또한 병원의 입장에서는 단기환자와 장기환자를 한 병동에서 관리하기 때문에 비효율적인 병실 관리가 진행되고 있다.
+### 프로젝트의 목적
+최근 코로나19의 영향으로 병실 부족사태가 심각해졌다.  
+  
+미국의 경우 한국에 비해 입원 비용이 높고, 입원 환자는 언제 퇴원할지 예측할 수 없기 때문에 환자 입장에서는 불확실성이 높은 문제가 있다. 또한 병원의 입장에서는 단기환자와 장기환자를 한 병동에서 관리하기 때문에 비효율적인 병실 관리가 진행되고 있다.  
+  
 이러한 불확실성을 줄이고 효율적인 관리를 위해서 입원기간을 예측해주는 서비스를 제공한다.
 
-## 웹 서비스 링크
-ec2-3-36-209-183.ap-northeast-2.compute.amazonaws.com
+### 웹 서비스(LOSAI)
+[LOSAI](ec2-3-36-209-183.ap-northeast-2.compute.amazonaws.com "LOSAI")
 
-## 시연 영상
-https://www.youtube.com/watch?v=rd1g5G8MAY4&feature=youtu.be
+### 시연 영상
+모델 구현 및 UI 프로토타입 https://www.youtube.com/watch?v=rd1g5G8MAY4&feature=youtu.be
 
-## 기술 블로그 주소
+### 기술 블로그 주소
 이진솔 : https://jinsol99.blogspot.com/2020/11/1.html  
 조은서 : https://eunsuh753.tistory.com/2  
-이선민 : https://tjsals.medium.com/%EC%A1%B8%EC%97%85%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-1-3f70518757f1  
+이선민 : https://tjsals.medium.com/  
 윤하영 : https://blog.naver.com/dbsgkdud136/222156186070
 
-## 참고 논문
+### 참고 논문
 박종호, 강성홍. (2019). 머신러닝을 이용한 신경계통의 질환 퇴원환자의 중증도 보정 재원일수 예측 모형 개발. 보건사회연구  
 고은해, 강희양, 김용식, 정성훈. (2017). 조현병 감별진단에 대한 머신 러닝 기법의 적용: WAIS-IV의 진단 예측 역량. 신경정신의학  
 이호현, 정승현, 최은정. (2016). 기계학습 응용 및 학습 알고리즘 성능 개선방안 사례연구    
@@ -34,6 +37,6 @@ Morton, A., Marzban, E., Giannoulis, G., Patel, A. (2014). A Comparison of Super
 Chen, T. &Guestrin, C. (2016) 『XGBoost: A Scalable Tree Boosting System』. In KDD&16 Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 785-794, New York: ACM.  
 Liaw, Andy, and Matthew Wiener. "Classification and regression by randomForest." R news 2.3 (2002)  
 
-# 참고 자료
+### 참고 자료
 https://books.google.com.sg/books/about/Classification%5Fand%5FRegression%5FTrees.html?id=JwQx-WOmSyQC&redir%5Fesc=y
 https://datahack.analyticsvidhya.com/contest/janatahack-healthcare-analytics-ii/#LeaderBoard
