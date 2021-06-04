@@ -8,7 +8,7 @@
 이러한 불확실성을 줄이고 효율적인 관리를 위해서 입원기간을 예측해주는 서비스를 제공한다.
 
 ### 웹 서비스(LOSAI)
-[LOSAI](ec2-52-78-79-63.ap-northeast-2.compute.amazonaws.com "LOSAI")
+ec2-52-78-79-63.ap-northeast-2.compute.amazonaws.com
 
 ### 시연 영상
 모델 구현 및 UI 프로토타입 https://www.youtube.com/watch?v=rd1g5G8MAY4&feature=youtu.be
@@ -39,5 +39,9 @@ Chen, T. &Guestrin, C. (2016) 『XGBoost: A Scalable Tree Boosting System』. In
 Liaw, Andy, and Matthew Wiener. "Classification and regression by randomForest." R news 2.3 (2002)  
 
 ### 참고 자료
-https://books.google.com.sg/books/about/Classification%5Fand%5FRegression%5FTrees.html?id=JwQx-WOmSyQC&redir%5Fesc=y
-https://datahack.analyticsvidhya.com/contest/janatahack-healthcare-analytics-ii/#LeaderBoard
+모델 구현  
++ https://books.google.com.sg/books/about/Classification%5Fand%5FRegression%5FTrees.html?id=JwQx-WOmSyQC&redir%5Fesc=y  
++ https://datahack.analyticsvidhya.com/contest/janatahack-healthcare-analytics-ii/#LeaderBoard  
+
+서버 배포  
++ https://nerogarret.tistory.com/45  
