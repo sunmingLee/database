@@ -8,10 +8,11 @@
 이러한 불확실성을 줄이고 효율적인 관리를 위해서 입원기간을 예측해주는 서비스를 제공한다.
 
 ### 웹 서비스(LOSAI)
-[LOSAI](ec2-3-36-209-183.ap-northeast-2.compute.amazonaws.com "LOSAI")
+[LOSAI](ec2-52-78-79-63.ap-northeast-2.compute.amazonaws.com "LOSAI")
 
 ### 시연 영상
 모델 구현 및 UI 프로토타입 https://www.youtube.com/watch?v=rd1g5G8MAY4&feature=youtu.be
+포스터 발표 
 
 ### 기술 블로그 주소
 이진솔 : https://jinsol99.blogspot.com/2020/11/1.html  
