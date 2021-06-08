@@ -11,7 +11,7 @@
 ec2-52-78-79-63.ap-northeast-2.compute.amazonaws.com
 
 ### 시연 영상
-모델 구현 및 UI 프로토타입 https://www.youtube.com/watch?v=rd1g5G8MAY4&feature=youtu.be
+모델 구현 및 UI 프로토타입 https://www.youtube.com/watch?v=rd1g5G8MAY4&feature=youtu.be  
 포스터 발표 
 
 ### 기술 블로그 주소
